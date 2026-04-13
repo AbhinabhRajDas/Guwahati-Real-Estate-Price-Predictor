@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Guwahati Home Price Prediction</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <div class="bg"></div>
+
+    <div class="container">
+        <h1>🏠 Guwahati House Price Predictor</h1>
+
+        <div class="card">
+
+            <label>Area (sqft)</label>
+            <input type="number" id="uiSqft" value="1000">
+
+            <label>BHK</label>
+            <div class="switch-field">
+                <input type="radio" id="bhk1" name="uiBHK" value="1">
+                <label for="bhk1">1</label>
+
+                <input type="radio" id="bhk2" name="uiBHK" value="2" checked>
+                <label for="bhk2">2</label>
+
+                <input type="radio" id="bhk3" name="uiBHK" value="3">
+                <label for="bhk3">3</label>
+
+                <input type="radio" id="bhk4" name="uiBHK" value="4">
+                <label for="bhk4">4</label>
+
+                <input type="radio" id="bhk5" name="uiBHK" value="5">
+                <label for="bhk5">5</label>
+            </div>
+
+            <label>Bathrooms</label>
+            <div class="switch-field">
+                <input type="radio" id="bath1" name="uiBathrooms" value="1">
+                <label for="bath1">1</label>
+
+                <input type="radio" id="bath2" name="uiBathrooms" value="2" checked>
+                <label for="bath2">2</label>
+
+                <input type="radio" id="bath3" name="uiBathrooms" value="3">
+                <label for="bath3">3</label>
+
+                <input type="radio" id="bath4" name="uiBathrooms" value="4">
+                <label for="bath4">4</label>
+
+                <input type="radio" id="bath5" name="uiBathrooms" value="5">
+                <label for="bath5">5</label>
+            </div>
+
+            <label>Location</label>
+            <select id="uiLocations">
+                <option disabled selected>Choose a Location</option>
+            </select>
+
+            <button onclick="onClickedEstimatePrice()">Estimate Price</button>
+
+            <div id="uiEstimatedPrice" class="result">
+                <span id="loader" class="loader" style="display:none;"></span>
+                <h2 id="priceText"></h2>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

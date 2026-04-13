@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+.bg {
+    background: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6');
+    background-size: cover;
+    filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Center container */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 15px;
+    width: 320px;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+h1 {
+    position: absolute;
+    top: 30px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Inputs */
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* Switch buttons */
+.switch-field {
+    display: flex;
+    margin-top: 10px;
+}
+
+.switch-field input {
+    display: none;
+}
+
+.switch-field label {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.switch-field input:checked+label {
+    background: #00c6ff;
+    color: black;
+}
+
+/* Button */
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Result box */
+.result {
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* Spinner */
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #00c6ff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    display: block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation */
+.result h2 {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+}
+
+.result.show h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
